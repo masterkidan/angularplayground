@@ -48,6 +48,8 @@ if [[ ! -n "$DEPLOYMENT_TARGET" ]]; then
 else
   KUDU_SERVICE=true
 fi
+echo "Clear npm package cache"
+npm cache clean
 
 if [[ ! -n "$KUDU_SYNC_CMD" ]]; then
   # Install kudu sync
