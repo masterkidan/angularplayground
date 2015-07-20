@@ -33,7 +33,6 @@
     "time-grunt": "^1.2.1",
     "bower": "1.4.1",
     "phantomjs": "1.9.17",
-    "karma": "0.13.2",
     "jasmine-core": "2.3.4"
   },
   "engines": {
