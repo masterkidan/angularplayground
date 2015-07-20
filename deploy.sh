@@ -49,7 +49,7 @@ else
   KUDU_SERVICE=true
 fi
 echo "Clear npm package cache"
-npm cache clean
+npm cache clean -f
 
 if [[ ! -n "$KUDU_SYNC_CMD" ]]; then
   # Install kudu sync
