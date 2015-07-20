@@ -22,5 +22,5 @@ angular.module('mytodoApp')
 
     $scope.removeTodo = function(index) {
       $scope.todos.splice(index, 1);
-    }
+    };
   });

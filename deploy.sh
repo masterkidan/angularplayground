@@ -104,34 +104,36 @@ echo Handling node.js deployment.
 selectNodeVersion
 
 # 2. Install npm packages
-if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
-  cd "$DEPLOYMENT_TARGET"
-  eval $NPM_CMD install --production
+if [ -e "./my-angular-project/mytodo/package.json" ]; then
+  cd "my-angular-project/mytodo"
+  eval $NPM_CMD install
   exitWithMessageOnError "npm failed"
-  cd - > /dev/null
+  #cd "$DEPLOYMENT_SOURCE"
+  cd ../..
 fi
 
 # 3. Install bower packages
-if [ -e "$DEPLOYMENT_TARGET/bower.json" ]; then
-  cd "$DEPLOYMENT_TARGET"
-  eval $NPM_CMD install bower
-  exitWithMessageOnError "installing bower failed"
-  ./node_modules/.bin/bower install
+if [ -e "./my-angular-project/mytodo/bower.json" ]; then
+  cd "my-angular-project/mytodo"
+  ./node_modules/.bin/bower --allow-root install
   exitWithMessageOnError "bower failed"
-  cd - > /dev/null
+  #cd "$DEPLOYMENT_SOURCE"
+  cd ../..
 fi
-
 
 # 4. Run grunt
-if [ -e "$DEPLOYMENT_SOURCE/Gruntfile.js" ]; then
-eval $NPM_CMD install grunt-cli
-exitWithMessageOnError "installing grunt failed"
-./node_modules/.bin/grunt --no-color clean common dist
-exitWithMessageOnError "grunt failed"
+if [ -e "./my-angular-project/mytodo/Gruntfile.js" ]; then
+  cd "my-angular-project/mytodo"
+  ./node_modules/.bin/grunt --no-color
+  exitWithMessageOnError "grunt failed"
+  #cd "$DEPLOYMENT_SOURCE"
+  cd ../..
 fi
 
-# 5. KuduSync to Target  
-"$KUDU_SYNC_CMD" -v 500 -f "$DEPLOYMENT_SOURCE/dist" -t "$DEPLOYMENT_TARGET" -n "$NEXT_MANIFEST_PATH" -p "$PREVIOUS_MANIFEST_PATH" -i ".git;.hg;.deployment;deploy.sh"
+cd - > /dev/null
+
+# 5. KuduSync to Target
+"$KUDU_SYNC_CMD" -v 500 -f "$DEPLOYMENT_SOURCE/my-angular-project/mytodo/dist" -t "$DEPLOYMENT_TARGET" -n "$NEXT_MANIFEST_PATH" -p "$PREVIOUS_MANIFEST_PATH" -i ".git;.hg;.deployment;deploy.sh"
 exitWithMessageOnError "Kudu Sync to Target failed"
 
 ##################################################################################################################################
