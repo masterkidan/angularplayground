@@ -1,5 +1,6 @@
 {
   "name": "mytodo",
+  "version": "1.0",
   "private": true,
   "dependencies": {
     "grunt-cli": "0.1.13",
