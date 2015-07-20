@@ -1,0 +1,160 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'generator-angularjs' ]
+2 info using npm@2.13.1
+3 info using node@v0.12.7
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'generator-angularjs', null ]
+7 verbose cache add spec generator-angularjs
+8 silly cache add parsed spec { raw: 'generator-angularjs',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'generator-angularjs',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: '*',
+8 silly cache add   type: 'range' }
+9 silly addNamed generator-angularjs@*
+10 verbose addNamed "*" is a valid semver range for generator-angularjs
+11 silly addNameRange { name: 'generator-angularjs', range: '*', hasData: false }
+12 silly mapToRegistry name generator-angularjs
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/generator-angularjs
+16 verbose addNameRange registry:https://registry.npmjs.org/generator-angularjs not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/generator-angularjs
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 8:22:38 PM
+20 verbose request id 9f36af3ca97d9872
+21 http request GET https://registry.npmjs.org/generator-angularjs
+22 http 200 https://registry.npmjs.org/generator-angularjs
+23 silly get cb [ 200,
+23 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+23 silly get     etag: '"DN6PDUURZ35JCYY9FDMDHWXEN"',
+23 silly get     'content-type': 'application/json',
+23 silly get     'cache-control': 'max-age=60',
+23 silly get     'content-length': '2391',
+23 silly get     'accept-ranges': 'bytes',
+23 silly get     date: 'Mon, 20 Jul 2015 03:22:39 GMT',
+23 silly get     via: '1.1 varnish',
+23 silly get     age: '0',
+23 silly get     connection: 'keep-alive',
+23 silly get     'x-served-by': 'cache-lax1430-LAX',
+23 silly get     'x-cache': 'MISS',
+23 silly get     'x-cache-hits': '0',
+23 silly get     'x-timer': 'S1437362558.685481,VS0,VE340',
+23 silly get     vary: 'Accept' } ]
+24 verbose get saving generator-angularjs to /home/masterkidan/.npm/registry.npmjs.org/generator-angularjs/.cache.json
+25 silly addNameRange number 2 { name: 'generator-angularjs', range: '*', hasData: true }
+26 silly addNameRange versions [ 'generator-angularjs', [ '1.0.0' ] ]
+27 silly addNamed generator-angularjs@1.0.0
+28 verbose addNamed "1.0.0" is a plain semver version for generator-angularjs
+29 silly mapToRegistry name generator-angularjs
+30 silly mapToRegistry using default registry
+31 silly mapToRegistry registry https://registry.npmjs.org/
+32 silly mapToRegistry uri https://registry.npmjs.org/generator-angularjs
+33 verbose addRemoteTarball https://registry.npmjs.org/generator-angularjs/-/generator-angularjs-1.0.0.tgz not in flight; adding
+34 verbose addRemoteTarball [ 'https://registry.npmjs.org/generator-angularjs/-/generator-angularjs-1.0.0.tgz',
+34 verbose addRemoteTarball   'b16d95ab50171060c2dd04ad3dd2a15d05d3e49c' ]
+35 info retry fetch attempt 1 at 8:22:39 PM
+36 info attempt registry request try #1 at 8:22:39 PM
+37 http fetch GET https://registry.npmjs.org/generator-angularjs/-/generator-angularjs-1.0.0.tgz
+38 http fetch 200 https://registry.npmjs.org/generator-angularjs/-/generator-angularjs-1.0.0.tgz
+39 silly fetchAndShaCheck shasum b16d95ab50171060c2dd04ad3dd2a15d05d3e49c
+40 verbose addTmpTarball /tmp/npm-3962-84a99d01/registry.npmjs.org/generator-angularjs/-/generator-angularjs-1.0.0.tgz not in flight; adding
+41 verbose addTmpTarball already have metadata; skipping unpack for generator-angularjs@1.0.0
+42 silly cache afterAdd generator-angularjs@1.0.0
+43 verbose afterAdd /home/masterkidan/.npm/generator-angularjs/1.0.0/package/package.json not in flight; writing
+44 verbose afterAdd /home/masterkidan/.npm/generator-angularjs/1.0.0/package/package.json written
+45 silly install resolved [ { name: 'generator-angularjs',
+45 silly install resolved     version: '1.0.0',
+45 silly install resolved     description: 'A generator for AngularJS apps',
+45 silly install resolved     keywords:
+45 silly install resolved      [ 'yeoman-generator',
+45 silly install resolved        'angularjs-generator',
+45 silly install resolved        'angular',
+45 silly install resolved        'angularjs',
+45 silly install resolved        'karma',
+45 silly install resolved        'amd',
+45 silly install resolved        'modules',
+45 silly install resolved        'require.js',
+45 silly install resolved        'r.js',
+45 silly install resolved        'mocha' ],
+45 silly install resolved     homepage: 'https://github.com/slatkovic/generator-angularjs',
+45 silly install resolved     bugs: { url: 'https://github.com/slatkovic/generator-angularjs/issues' },
+45 silly install resolved     author:
+45 silly install resolved      { name: 'Stipe Ivan Latkovic',
+45 silly install resolved        email: 'slatkovi@gmail.com',
+45 silly install resolved        url: 'https://github.com/slatkovic' },
+45 silly install resolved     main: 'app/index.js',
+45 silly install resolved     repository:
+45 silly install resolved      { type: 'git',
+45 silly install resolved        url: 'git://github.com/slatkovic/generator-angularjs.git' },
+45 silly install resolved     scripts: { test: 'mocha' },
+45 silly install resolved     dependencies: { 'yeoman-generator': '~0.14.0' },
+45 silly install resolved     devDependencies: { mocha: '~1.14.0' },
+45 silly install resolved     peerDependencies: { yo: '>=1.0.0' },
+45 silly install resolved     engines: { node: '>=0.8.0', npm: '>=1.2.10' },
+45 silly install resolved     licenses: [ [Object] ],
+45 silly install resolved     _id: 'generator-angularjs@1.0.0',
+45 silly install resolved     dist:
+45 silly install resolved      { shasum: 'b16d95ab50171060c2dd04ad3dd2a15d05d3e49c',
+45 silly install resolved        tarball: 'http://registry.npmjs.org/generator-angularjs/-/generator-angularjs-1.0.0.tgz' },
+45 silly install resolved     _from: 'generator-angularjs@*',
+45 silly install resolved     _npmVersion: '1.3.21',
+45 silly install resolved     _npmUser: { name: 'slatkovi', email: 'slatkovi@gmail.com' },
+45 silly install resolved     maintainers: [ [Object] ],
+45 silly install resolved     directories: {},
+45 silly install resolved     _shasum: 'b16d95ab50171060c2dd04ad3dd2a15d05d3e49c',
+45 silly install resolved     _resolved: 'https://registry.npmjs.org/generator-angularjs/-/generator-angularjs-1.0.0.tgz' } ]
+46 info install generator-angularjs@1.0.0 into /usr/local/lib
+47 info installOne generator-angularjs@1.0.0
+48 verbose installOne of generator-angularjs to /usr/local/lib not in flight; installing
+49 verbose lock using /home/masterkidan/.npm/_locks/generator-angularjs-1e9abb170096cf47.lock for /usr/local/lib/node_modules/generator-angularjs
+50 silly install write writing generator-angularjs 1.0.0 to /usr/local/lib/node_modules/generator-angularjs
+51 verbose unbuild lib/node_modules/generator-angularjs
+52 silly gentlyRm /usr/local/lib/node_modules/generator-angularjs is being purged from base /usr/local
+53 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/generator-angularjs
+54 verbose tar unpack /home/masterkidan/.npm/generator-angularjs/1.0.0/package.tgz
+55 verbose tar unpacking to /usr/local/lib/node_modules/generator-angularjs
+56 silly gentlyRm /usr/local/lib/node_modules/generator-angularjs is being purged
+57 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/generator-angularjs
+58 silly gunzTarPerm modes [ '775', '664' ]
+59 error tar.unpack untar error /home/masterkidan/.npm/generator-angularjs/1.0.0/package.tgz
+60 verbose unlock done using /home/masterkidan/.npm/_locks/generator-angularjs-1e9abb170096cf47.lock for /usr/local/lib/node_modules/generator-angularjs
+61 verbose fstream_path /usr/local/lib/node_modules/generator-angularjs
+62 verbose fstream_type Directory
+63 verbose fstream_class DirWriter
+64 verbose stack Error: EACCES, mkdir '/usr/local/lib/node_modules/generator-angularjs'
+64 verbose stack     at Error (native)
+65 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+65 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+65 verbose fstream_stack FSReqWrap.oncomplete (fs.js:95:15)
+66 verbose cwd /media/masterkidan/Data/Playground/yeoman/my-angular-project
+67 error Linux 3.19.0-22-generic
+68 error argv "node" "/usr/local/bin/npm" "install" "-g" "generator-angularjs"
+69 error node v0.12.7
+70 error npm  v2.13.1
+71 error path /usr/local/lib/node_modules/generator-angularjs
+72 error code EACCES
+73 error errno -13
+74 error Error: EACCES, mkdir '/usr/local/lib/node_modules/generator-angularjs'
+74 error     at Error (native)
+74 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/generator-angularjs']
+74 error   errno: -13,
+74 error   code: 'EACCES',
+74 error   path: '/usr/local/lib/node_modules/generator-angularjs',
+74 error   fstream_type: 'Directory',
+74 error   fstream_path: '/usr/local/lib/node_modules/generator-angularjs',
+74 error   fstream_class: 'DirWriter',
+74 error   fstream_stack:
+74 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+74 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+74 error      'FSReqWrap.oncomplete (fs.js:95:15)' ] }
+75 error Please try running this command again as root/Administrator.
+76 verbose exit [ -13, true ]
+77 verbose unbuild lib/node_modules/generator-angularjs
+78 silly gentlyRm /usr/local/lib/node_modules/generator-angularjs is being purged from base /usr/local
+79 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/generator-angularjs
