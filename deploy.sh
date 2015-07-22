@@ -108,8 +108,7 @@ selectNodeVersion
 # 2. Install npm packages
 if [ -e "./my-angular-project/mytodo/package.json" ]; then
   cd "my-angular-project/mytodo"
-  eval $NPM_CMD cache clean
-  eval $NPM_CMD install -g 
+  eval $NPM_CMD install -g --ignore-scripts
   exitWithMessageOnError "npm failed"
   #cd "$DEPLOYMENT_SOURCE"
   cd ../..
